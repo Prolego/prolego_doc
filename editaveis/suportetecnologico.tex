@@ -1,19 +1,19 @@
-\chapter{Suporte Tecnológico}
-Para dar suporte ao desenvolvimento do projeto foi feito um levantamento de ferramentas candidatas, sendo este refinado e descrito a seguir.
+\chapter{Suporte tecnológico}
+Para dar suporte ao desenvolvimento do projeto foi feito um levantamento de ferramentas candidatas, sendo este refinado e descrito nesse capítulo. Assim como o capítulo anterior, este capítulo, de suporte tecnológico, foi organizado em dois escopos, um mais voltado ao suporte tecnológico investigado no domínio da Robótica Educacional e outro mais voltado à Engenharia de Software.
 
-\section{Robótica Educacional}
-Um dos maiores precursores da robótica no âmbito educacional foi Seymour Papert ao criar a  linguagem LOGO com o intuito de incentivar a aprendizagem da matemática, baseado nas idéias do suiço Jean Piaget que dizia, \textit{"as funções essenciais da inteligência consistem em compreender e inventar, em outras palavras, construir estruturas estruturando o real”}, ou seja, é essencial para a formação da inteligência a ação sobre objetos, e por meio dessa descobrir propriedades por meio de abstração.
-Desde então, a robótica educacional vem se tornando uma plataforma atraente para criar envolvimento nos estudantes, incentivando o estudo da ciência e da tecnologia. 
-As plataformas iterativas/lúdicas vem ganhando espaço ao longo dos anos como ferramentas auxiliares às metodologias de ensino que utilizam a robótica educacional. Dentre essas plataformas podemos citar: Robomind\footnote{www.robomindacademy.com}, Scratch\footnote{www.scratch.mit.edu}, Arduino\footnote{www.arduino.cc}, Raspberry Pi\footnote{www.raspberrypi.org} e o Kit Lego Mindstorms\footnote{mindstorms.lego.com}. Essas plataformas serão brevemente descritas a seguir.
+\section{Robótica educacional}
+Um dos maiores precursores da robótica no âmbito educacional foi Seymour Papert ao criar a  linguagem LOGO com o intuito de incentivar a aprendizagem da matemática, baseado nas idéias do suiço Jean Piaget que dizia, \textit{"as funções essenciais da inteligência consistem em compreender e inventar, em outras palavras, construir estruturas estruturando o real”}, ou seja, é essencial para a formação da inteligência a ação sobre objetos, e por meio dessa descobrir propriedades através de abstração.
+Desde então, a robótica educacional vêm se tornando uma plataforma atraente para criar envolvimento nos estudantes, incentivando o estudo da ciência e da tecnologia. 
+As plataformas iterativas/lúdicas vêm ganhando espaço ao longo dos anos como ferramentas auxiliares às metodologias de ensino que utilizam a robótica educacional. Dentre essas plataformas podemos citar: Robomind\footnote{www.robomindacademy.com}, Scratch\footnote{www.scratch.mit.edu}, Arduino\footnote{www.arduino.cc}, Raspberry Pi\footnote{www.raspberrypi.org} e o Kit Lego Mindstorms\footnote{mindstorms.lego.com}. Essas plataformas serão brevemente descritas a seguir.
 
 \subsection{Robomind}
 O Robomind é uma IDE para a programação dos movimentos de um robô em um mundo bidimensional, através de uma linguagem de programação bem simples e intuitiva, ideal para iniciantes. 
 A interface da IDE é composta por quatro partes: à cima contêm o menu e os atalhos para as funções mais utilizadas, como inserir qualquer movimento; à esquerda encontra-se a área de  edição do código; à direita contém o mundo bidimensional, onde é possível visualizar o robô realizando os movimentos, previamente determinados pelo código, em um mapa; e na parte inferior encontra-se o controle de execução do programa juntamente à área de mensagens utilizadas pela IDE para informar erros sintáticos ou durante a execução do código, e a situação na qual o robô se encontra. 
-O Robomind é gratuito para teste durante 30 dias. Após esse periodo é possível compra-lo por USD 14.00 por ano. Ele pode ser instalado em vários idiomas, dentre eles o Português\footnote{www.robomind.net/pt/}, além de ser multiplataforma, Linux, Mac e Windows. 
+O Robomind é gratuito para teste durante 30 dias. Após esse periodo, é possível comprá-lo por USD 14.00 por ano. Ele pode ser instalado em vários idiomas, dentre eles o Português\footnote{www.robomind.net/pt/}, além de ser multiplataforma, Linux, Mac e Windows. 
 Com o Robomind só é possível simular o comportamento do que é implementado, não trabalhando a montagem de um robô, programação embarcada e utilização de sensores.
 
 \subsection{Scratch}
-O Scratch é um ambiente e uma linguagem de programação multimídia, produzido pelo \textit{MediaLab}\footnote{www.media.mit.edu} do MIT, para ser utilizado por crianças a partir dos oito anos de idade para criação de histórias iterativas, animações, jogos, músicas, dentre outros, ditos projetos Scratch. 
+O Scratch é um ambiente e uma linguagem de programação multimídia, produzido pelo \textit{MediaLab}\footnote{www.media.mit.edu} do MIT, para ser utilizado por crianças a partir dos oito anos de idade na criação de histórias iterativas, animações, jogos, músicas, dentre outros, ditos projetos Scratch. 
 Um projeto Scratch contém personagens programáveis, que podem tratar eventos vindos do teclado ou do mouse, para mudança de posição e direção, dentre outras funcionalidades.
 Assim como o Robomind, ele utiliza uma linguagem de programação em blocos, com encaixe seletivo ideal para programadores iniciantes. O Scratch é gratuito, \textit{online} e também tem a opção de utilizá-lo em português.
 Similar ao Robomind, no Scratch só é possível simular de forma limitada a implementação, não sendo possível testar em um robô físico nem utilizar sensores.
@@ -21,26 +21,33 @@ Similar ao Robomind, no Scratch só é possível simular de forma limitada a imp
 \subsection{Arduino}
 O Arduino é uma plataforma de prototipagem eletrônica \textit{open-source}, criada em 2005 pelo italiano Massimo Banzi, para auxiliar no ensino de eletrônica visando o baixo custo para os alunos. A plataforma é composta por um \textit{hardware} e um \textit{software} bastante flexíveis. 
 O \textit{hardware} é constituído de uma placa com um microprocessador; porta USB, usada para comunicação serial com o computador; pinos digitais, utilizados para detecção ou transmissão de controles digitais; pinos analógicos, usados para leitura de sinais de sensores; e pinos de alimentação, usados para alimentação de circuitos externos. 
-O \textit{software} é uma IDE, onde será programado o código, conhecido como \textit{sketch}, e por meio desta será passado à placa através de uma comunicação serial. Nesta IDE é utilizada a linguagem de programação Arduino, mas quando é passado para a placa, esta linguagem é traduzida para a linguagem estruturada C. Sua IDE é multiplataforma, podendo ser instalada em Linux, Mac e Windows.
+O \textit{software} é uma IDE, onde será programado o código, conhecido como \textit{sketch}, e por meio desta será passado à placa através de uma comunicação serial. Nesta IDE, é utilizada a linguagem de programação Arduino, mas quando é passado para a placa, esta linguagem é traduzida para a linguagem estruturada C. A IDE é multiplataforma, podendo ser instalada em Linux, Mac e Windows.
 O Arduino tem a vantagem de utilizar programação embarcada no robô e possuir entradas para diversos sensores, porém a montagem do robô fica a critério do desenvolvedor não tendo padronização alguma.
 
 \subsection{Raspberry Pi}
-O Raspberry Pi é um computador versátil e flexível, criado pela \textit{Raspiberry Pi Foundation}\footnote{www.raspberrypi.org/about/} em conjunto com a Universidade de Cambrigde, no ano de 2012, com o objetivo de estimular o ensino da ciência da computação em jovens do ensino básico.
+O Raspberry Pi é um computador versátil e flexível, criado pela \textit{Raspberry Pi Foundation}\footnote{www.raspberrypi.org/about/} em conjunto com a Universidade de Cambrigde, no ano de 2012, com o objetivo de estimular o ensino da ciência da computação em jovens do ensino básico.
 O Raspberry Pi possui dois modelos, ambos equipados com processador multimídia \textit{Broadcom} BCM2835 \textit{system-on-chip} (SoC) de 700 Mhz com placa gráfica integrada VideoCore IV; entrada para cartão de memória, que se faz necessário pois o Raspberry Pi não possui armazenamento interno; interface HDMI; entrada USB e RCA; processador ARM 7 com capacidade de processamento de 32 bits, não sendo possível a instalação do Windows, mas aceitando qualquer distribuição Linux, como o Raspbian que é baseado no sistema operacional Debian. O que difere nas duas versões é a memoria RAM. Um modelo é oferecido com 256 MB e o outro com 512 MB.
 Assim como o Arduino, a desvantagem do Raspberry Pi é a não padronização da montagem dos robôs. Entretanto, é possível a utilização de sensores e programação embarcada.
 
-\subsection{Kit Educacional Lego Mindstorms}
-A LEGO lançou em janeiro de 2006, na feira \textit{Consumer Electronics Show}\footnote{www.cesweb.org} em Las Vegas, a linha Mindstorms NXT, que é uma versão mais avançada que a já consagrada RCX, possuindo um processador Atmel ARM 32 bits com \textit{clock} de 48MHz, HD de 256KB de memória \textit{flash}, memória RAM de 64KB, software próprio, sensores de luz, toque e som. Esse suportr confere ao robô noções de distância, sendo inclusive capaz de reagir a movimentos, ruídos e cores. Essa nova versão também executa movimentos com maior grau de precisão que seu antecessor.
-O kit Lego Mindstorms é bem flexível quanto a montagem do robô, porém a Lego disponibiliza um manual de montagem de um robô padrão, uma vantagem ao se comparar com os concorrentes mencionados anteriormente. 
-A escolha do kit Lego Mindstorms para o dado projeto se deu, além da vantagem já conhecida da padronização do robô, por ele já conter os sensores necessários no kit e por esse material ser utilizado na matéria Princípios de Robótica Educacional, ministrada na FGA pelo prof. Dr. Maurício Serrano, co-orientador deste projeto.  
+\subsection{Kit educacional Lego Mindstorms}
+A LEGO lançou em janeiro de 2006, na feira \textit{Consumer Electronics Show}\footnote{www.cesweb.org} em Las Vegas, a linha Mindstorms NXT, que é uma versão mais avançada que a já consagrada RCX, possuindo um processador Atmel ARM 32 bits com \textit{clock} de 48MHz, HD de 256KB de memória \textit{flash}, memória RAM de 64KB, software próprio, sensores de luz, toque e som. Esse suporte confere ao robô noções de distância, sendo inclusive capaz de reagir a movimentos, ruídos e cores. Essa nova versão também executa movimentos com maior grau de precisão que seu antecessor.
+O kit Lego Mindstorms é bem flexível quanto à montagem do robô, porém a Lego disponibiliza um manual de montagem de um robô padrão; uma vantagem ao se comparar com os concorrentes mencionados anteriormente. 
+A escolha do kit Lego Mindstorms para o dado projeto se deu, além da vantagem já conhecida da padronização do robô, por ele já conter os sensores necessários no kit e por esse material ser utilizado na matéria Princípios de Robótica Educacional, ministrada na FGA pelo prof. Dr. Maurício Serrano, co-orientador deste projeto. Como o kit tem uma liguagem de programação própria, e a liguagem de programação escolhida por este trabalho foi o Prolog, se fez necessário a busca de uma ferramenta que tornasse possível essa integração, sendo esta ferramenta brevemente descrita a seguir.  
 
-FALTA COLOCAR O QUE SERÁ UTILIZADO PARA RODAR O CÓDIGO EM PROLOG NO ROBÔ.
+\subsection{Traveller}
+O \textit{framework} Traveller \cite{rinconframework}, contém algoritmos para definir qual caminho o robô deve seguir de modo a chegar a um destino de forma rápida e eficiente. Utilizando o robô Lego Mindstorms NXT, o Traveller definirá qual será a trajetória para o robô alcançar determinado ponto no mapa desviando dos obstáculos. A trajetória definida pelo Traveller dará suporte à máquina de raciocínio para o cálculo do tempo necessário para executar cada missão do tapete de missões.
 
+\subsection{PLNXT}
+O PLNXT é uma plataforma baseada na \textit{Prolog API for Mindstorms NXT}, desenvolvida dentro do projeto \textit{HeKatE}\footnote{hekate.ia.agh.du.pl}, e visa proporcionar uma solução para a programação de alto nível no robô LEGO Mindstorms NXT.
+Proporciona a comunicação via \textit{bluetooth} ou USB com o robô e possibilita a programação das funcionalidades do robô, como virar, andar para frente, andar para trás, leitura dos sensores, dentre outros, na linguagem de programação Prolog.
+Segundo o site da plataforma\footnote{http://ai.ia.agh.edu.pl/wiki/mindstorms:nxt\_prolog\_api}, o PLNXT é de fácil programação, tem uma média dificuldade de instalação, possui a capacidade de controlar o NXT sem ter que carregar um programa na memória do robô e possui uma boa legibilidade.
 
-\section{Engenharia de Software}
+\section{Engenharia de software}
+De modo a gerenciar o processo de desenvolvimento deste trabalho, bem como desenvolver, manter e disponibilizar o código e artefatos gerados, o uso de algumas ferramentas se faz necessário. Tais ferramentas são brevemente descritas a seguir, bem como a distribuição do sistema operacional utilizada.
+
 \subsection{Ubuntu}
 O Linux foi criado por Linus Torvalds em 1991 \cite{torvalds2001just} e desde então amplamente aderido pela comunidade. Com base nesse kernel vários outros sistemas operacionais foram criados, dentre eles o Ubuntu. 
-Baseado no Debian e patrocinado pela Canonical Ltda., o Ubuntu é licenciado por General License Public (GPL), podendo ser então modificado e distribuído de acordo com os termos da licença. Robustez e confiabilidade, por meio de código aberto, compatibilidade, segurança, rapidez e robustez são algumas características que o fazem tão popular. 
+Baseado no Debian e patrocinado pela Canonical Ltda., o Ubuntu é licenciado por General License Public (GPL), podendo ser então modificado e distribuído de acordo com os termos da licença. Robustez e confiabilidade, por meio de código aberto, compatibilidade, segurança e rapidez são algumas características que o fazem tão popular. 
 
 \subsection{SWIProlog}
 O SWIProlog é uma implementação, de código aberto, para a linguagem de programação Prolog, executando em modo texto, através de comandos no terminal do sistema. Sob a licença \textit{Lesser GNU Public License}\footnote{http://www.gnu.org/licenses/lgpl.html}, pode ser utilizado nas plataformas Windows, Linux e MacOS. Possui diversas ferramentas de edição gráfica, tais como: J-Prolog Editor e SWI-Prolog-Editor.
@@ -50,7 +57,7 @@ Permite ainda a utilização da linguagem Prolog por outras linguagens, tais com
 O BizAgi Process Modeler\footnote{http://www.bizagi.com/en/bpm-suite/bpm-products/modeler} é um aplicativo gratuito utilizado para criar e documentar modelos de processos em BPMN\footnote{www.bpmn.org} (\textit{Business Process Model and Notation}). Esse aplicativo faz parte de uma suíte de software, chamada Bizagi, composta por dois produtos: o Bizagi Process Modeler e o BizAgi BPM Suite. 
 
 \subsection{Git}
-O Git\footnote{http://www.git-scm.com/} é um dos mais consagrados e utilizados sistemas de controle de versão distribuída. É \textit{open-source} e gratuito, distribuído sob a licença GNU GPLv2\footnote{http://www.gnu.org/licenses/gpl-2.0.html}, e projetado para lidar com qualquer tamanho de projeto mantendo a rapidez e eficiência. 
+O Git\footnote{http://www.git-scm.com/} é um dos mais consagrados e utilizados sistemas de controle de versão. É \textit{open-source} e gratuito, distribuído sob a licença GNU GPLv2\footnote{http://www.gnu.org/licenses/gpl-2.0.html}, e projetado para lidar com qualquer tamanho de projeto mantendo a rapidez e a eficiência. 
 
 \subsection{Github}
 O GitHub é um repositório web planejado para utilizadores do sistema de controle de versão Git. Possui opções de utilização de repositórios privados e públicos, sendo o pago e gratuito, respectivamente.
@@ -65,6 +72,7 @@ O Latex é mais amplamente utilizado no meio técnico-científico para escrita d
 
 \subsection{TexMaker}
 O TeXMaker\footnote{http://www.xm1math.net/texmaker/} é um editor de texto Latex gratuito, multiplataforma para Linux e MacOSX, com suporte a unicode, verificação ortográfica, auto-completar e contém um visualizador de pdf embutido.
-Com uma interface simples, o TexMaker contém botões de atalho para as funções mais utilizadas como: estruturas (part/chapter/section), referências (ref/cite), tamanho e estilo de letra, negrito, itálico, alinhar (direta/esquerda, centro) e inserir diversos símbolos matemáticos.
+Com uma interface simples, o TexMaker contém botões de atalho para as funções mais utilizadas como: estruturas (part/chapter/section), referências (ref/cite), tamanho e estilo de letra, negrito, itálico, alinhamento (direta/esquerda, centro) e inserção de diversos símbolos matemáticos.
 
-\section{Considerações finais}
+\section{Considerações parciais}
+As ferramentas descritas nesse capítulo foram investigadas com o intuito de verificar as diversas formas de se trabalhar com a robótica na área educacional e auxiliar na compreensão do domínio do problema. O estudo dessas ferramentas serviu de insumo para a elaboração da proposta do algoritmo de programação dinâmica, produto de trabalho desse TCC. Já as ferramentas relacionadas à engenharia de software citadas nesse capítulo visam auxiliar no desenvolvimento do trabalho, tanto na parte escrita, quanto na de planejamento e implementação.
