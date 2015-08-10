@@ -219,14 +219,14 @@ A arquitetura de controle híbrido nada mais é do que um controle reativo sendo
 Este tipo de arquitetura é uma das mais sofisticadas e adotadas na implementação dos sistemas de controle dos robôs móveis autônomos modernos, devido a sua eficiência em atingir os objetivos do robô. 
 
 \section{Engenharia de software}
-O estudo da robótica na Universidade tem um foco considerável na inteligência artificial, e uma das áreas desta é a otimização. A seguir são brevemente descritos os dois algoritmos de otimização abordados por este trabalho, o algoritmo guloso e a programação dinâmica, bem como o paradigma lógico, também tema deste trabalho.
+O estudo da robótica na Universidade tem um foco considerável na inteligência artificial, e uma de suas subáreas é a otimização. A seguir são brevemente descritos os dois algoritmos de otimização abordados por este trabalho, o algoritmo guloso e a programação dinâmica, bem como o paradigma lógico, também tema deste trabalho.
 \subsection{Algoritmo guloso}
 Os algoritmos gulosos tomam uma decisão levando em consideração apenas a informação disponível no dado momento, sem levar em conta as consequências da decisão, nunca reconsiderando uma decisão já tomada. Dessa forma, o algoritmo guloso toma uma decisão ótima naquele momento (decisão ótima local), e espera que essa decisão seja também a ótima global \cite{anderson2004}.
 \subsubsection{Características do algoritmo guloso}
 Segundo \cite{anderson2004}, os problemas e os algoritmos gulosos que os resolvem são caracterizados pelos itens a seguir.
 \begin{itemize}
 \item Para que exista uma solução ótima de um problema deve existir um conjunto de candidatos;
-\item Ao executar um algoritmo guloso dois conjuntos são criados: um que contêm os elementos que foram analisados e rejeitados e outro os elementos que foram analisados e escolhidos;
+\item Ao executar um algoritmo guloso dois conjuntos são criados: um que contêm os elementos que foram analisados e rejeitados, e outro os elementos que foram analisados e escolhidos;
 \item Um algoritmo guloso contêm quatro funções: 
 \begin{itemize}
 \item a primeira avalia se o conjunto candidato produz uma solução para o problema; 
@@ -235,12 +235,12 @@ Segundo \cite{anderson2004}, os problemas e os algoritmos gulosos que os resolve
 \item a quarta e última função, chamada função objetivo, retorna o valor da solução encontrada.
 \end{itemize} 
 \end{itemize}
-É possivel dizer que um algoritmo guloso trabalha da seguinte forma: inicialmente contém um conjunto S que está vazio, ou seja, nenhum candidato foi escolhido. A cada passo a função seleção é utilizada para determinar qual o melhor candidato. Se o elemento analisado não é viável, ignora-se o termo que está sendo avaliado no momento. Se for viável, adiciona o elemento ao conjunto S. O elemento avaliado, sendo ele aceito ou rejeitado, será avaliado apenas uma vez, não havendo reconsiderações. A cada vez que o conjunto de candidatos escolhidos (S) é ampliado, é verificado se a solução do problema foi obtida \cite{anderson2004}.  
+É possível dizer que um algoritmo guloso trabalha da seguinte forma: inicialmente contém um conjunto S que está vazio, ou seja, nenhum candidato foi escolhido. A cada passo a função seleção é utilizada para determinar qual o melhor candidato. Se o elemento analisado não é viável, ignora-se o termo que está sendo avaliado no momento. Se for viável, adiciona o elemento ao conjunto S. O elemento avaliado, sendo ele aceito ou rejeitado, será avaliado apenas uma vez, não havendo reconsiderações. A cada vez que o conjunto de candidatos escolhidos (S) é ampliado, é também verificado se a solução do problema foi obtida \cite{anderson2004}.  
 \subsubsection{Elementos da estratégia gulosa}
 Como exposto, a estratégia utilizada pelo algoritmo guloso para encontrar a solução ótima do problema em questão é em cada passo escolher a solução que parece ser ótima naquele momento. Nem sempre uma estratégia gulosa é capaz de chegar à solução de um problema, mesmo esta existindo. Existem duas características que podem indicar se o problema pode ou não ser resolvido através de uma estratégia gulosa.
 \begin{itemize}
-\item \textbf{Propriedade da escolha gulosa:} Segundo a propriedade da escolha gulosa, uma solução globalmente ótima pode ser alcançada escolhendo uma solução localmente ótima. Para se provar que uma escolha localmente ótima em cada um dos passos irá levar a uma solução ótima é necessário examinar uma solução ótima global para algum subproblema. Posteriormente, deve-se mostrar que essa solução pode ser modificada em uma solução gulosa. Tal estratégia irá resultar em um subproblema menor, mas similiar.
-\item \textbf{Subestrutura ótima:} Esta característica também é importante quando se utiliza a programação dinâmica, vide seção \ref{Programação dinâmica}. Um problema possui uma subestrutura ótima quando uma solução ótima para o problema contêm, dentro dela, soluções ótimas para os subproblemas.
+\item \textbf{Propriedade da escolha gulosa:} segundo a propriedade da escolha gulosa, uma solução globalmente ótima pode ser alcançada escolhendo uma solução localmente ótima. Para se provar que uma escolha localmente ótima em cada um dos passos irá levar a uma solução ótima, é necessário examinar uma solução ótima global para algum subproblema. Posteriormente, deve-se mostrar que essa solução pode ser modificada em uma solução gulosa. Tal estratégia irá resultar em um subproblema menor, mas similiar.
+\item \textbf{Subestrutura ótima:} esta característica também é importante quando se utiliza a programação dinâmica, vide Seção \ref{Programação dinâmica}. Um problema possui uma subestrutura ótima quando uma solução ótima para o problema contém, dentro dela, soluções ótimas para os subproblemas.
 \end{itemize}
 \subsubsection{Fundamentos do algoritmo guloso}
 A teoria de algoritmos gulosos envolve o conceito de matróide que por definição é um par (E,I) onde E é um conjuto finito e I $\subseteq 2^{E}$, que satisfaz os seguintes axiomas \cite{paulo2007cobertura}:
@@ -252,20 +252,20 @@ A teoria de algoritmos gulosos envolve o conceito de matróide que por definiç�
 Esse tipo de estrutura não cobre todo tipo de problema que pode ser resolvido pelo algoritmo guloso, mas cobre muitos casos de interesse prático.
 
 \textbf{Lema:} todo conjunto independente maximal em um matróide tem o mesmo tamanho. 
-\textbf{Prova:}  Por contradição. Se existir dois conjuntos independentes maximais A e B e |A| < |B|, deve existir um elemento x $\in$ (B - A) tal que (A + x) $\in$ I. Isso contradiz o fato de que A é um conjunto maximal.
+\textbf{Prova:}  Por contradição. Se existem dois conjuntos independentes maximais A e B e |A| < |B|, deve existir um elemento x $\in$ (B - A) tal que (A + x) $\in$ I. Isso contradiz o fato de que A é um conjunto maximal.
 
 \subsection{Programação dinâmica} \label{Programação dinâmica}
-A programação dinâmica, assim como os métodos de "dividir para conquistar", combina as soluções dos subproblemas para resolver um problema. Esses métodos particionam os problemas em subproblemas de forma que resolvendo os subproblemas, recursivamente, resolve-se o problema. Já a programação dinâmica aplica-se quando os subproblemas se particionam em subsubproblemas. Um algoritmo comum resolve repetidamente essas partições, trabalhando mais que o necessário. Em contrapartida, o algoritmo dinâmico resolve cada subsubproblema apenas uma vez, salvando o resultado em uma tabela, evitando calcular repetidas vezes o mesmo problema \cite{cormen2009introduction}.
+A programação dinâmica, assim como os métodos de "dividir para conquistar", combina as soluções dos subproblemas para resolver um problema. Esses métodos particionam os problemas em subproblemas de forma que, resolvendo os subproblemas recursivamente, resolve-se o problema. Já a programação dinâmica aplica-se quando os subproblemas se particionam em subsubproblemas. Um algoritmo comum resolve repetidamente essas partições, trabalhando mais que o necessário. Em contrapartida, o algoritmo dinâmico resolve cada subsubproblema apenas uma vez, salvando o resultado em uma tabela, evitando calcular repetidas vezes o mesmo problema \cite{cormen2009introduction}.
 Um problema pode ter várias soluções possíveis, cada uma com um valor, e a solução com o melhor valor (maior ou menor) é dita a solução ótima para o problema.
 Segundo \cite{cormen2009introduction} para se desenvolver uma solução de programação dinâmica devem ser seguidos quatro passos:
-\begin{itemize}
+\begin{enumerate}
 \item Caracterizar a estrutura de uma solução ótima;
 \item Recursivamente definir o valor de uma solução ótima;
 \item Calcular o valor de uma solução ideal, normalmente de forma ascendente, e
 \item Construir uma solução ótima a partir de informações computadas. 
-\end{itemize}
-Os três primeiros itens formam a base de uma solução dinâmica. Mas, quando utilizar a programação dinâmica para resolver um problema? O primeiro passo para resolver um problema de otimização por programação dinâmica é caracterizar uma subestrutura ótima, sempre que um problema exibi-la. 
-Para caracterizar o espaço de subproblemas, deve-se manter o espaço o mais simples possível e, em seguida, expandi-lo, se necessário. Uma subestrutura ótima varia entre os domínios de problema de duas formas:
+\end{enumerate}
+Os três primeiros passos formam a base de uma solução dinâmica. Mas quando utilizar a programação dinâmica para resolver um problema? O primeiro passo para resolver um problema de otimização por programação dinâmica é caracterizar uma subestrutura ótima, sempre que um problema exibí-la. 
+Para caracterizar o espaço de subproblemas, deve-se manter o espaço o mais simples possível e, em seguida, expandí-lo se necessário. Uma subestrutura ótima varia entre os domínios de problema de duas formas:
 \begin{enumerate}[label=(\roman*)]
 \item quantos subproblemas uma solução ideal utiliza para o problema, e
 \item quantas escolhas existem para determinar quais subproblemas usar em uma solução ótima.
@@ -275,26 +275,26 @@ Ou seja, pode ser que um problema tenha apenas um subproblema (de tamanho n - i)
 \subsubsection{\textit{Memoization} vs Iteração sobre subproblemas} 
 A palavra \textit{memoization} vem do termo \textit{memoize} que deriva de um termo latim \textit{memorandum} que quer dizer relembrando. Essa é uma técnica \textit{top-down} que  armazena em uma tabela a solução de cada subsubproblema, evitando assim o retrabalho e aumentando a eficiência. Essa técnica utiliza um algoritmo recursivo.
 
-A iteração sobre subproblemas é uma técnica \textit{buttom-up} que utiliza um algoritmo iterativo para calcular os subproblemas. Essa técnica começa a calcular do menor subproblema para o maior. 
+A iteração sobre subproblemas é uma técnica \textit{bottom-up} que utiliza um algoritmo iterativo para calcular os subproblemas. Essa técnica começa a calcular do menor subproblema para o maior. 
 
 \subsection{Paradigma lógico}
 Os literais são fórmulas atômicas positivas ou negativas, que em conjunto formam uma cláusula. Um tipo de cláusula é a chamada cláusula de Horn (ou cláusula definitiva), onde cada cláusula tem no máximo um literal positivo. Essas cláusulas são utilizadas pela resolução SLD (Selection-rule driven Linear resolution for Definite clauses), que restringe o uso de literais para tornar as implementações mais eficientes. Essa resolução recebe como entrada um programa lógico P e uma consulta N, e efetua a resolução entre a consulta N e alguma regra de P. O ganho de eficiência vem do fato de que, para cada regra é possível a seleção de apenas um literal para a resolução com N \cite{rodrigues2010fundamentos}.
 A programação lógica surgiu da aplicação da SLD no processamento da linguagem natural da  inteligência artificial, e esse processamento serviu como primeira aplicação e motivo imediato para o desenvolvimento do Prolog (Programation en Logique) \cite{rodrigues2010fundamentos}.
 \subsubsection{Prolog}
 O Prolog é uma linguagem de programação utilizada para resolver problemas que envolvam objetos e relações entre objetos. O termo objeto em Prolog não se refere a uma estrutura de dados que pode herdar variáveis e métodos de uma classe, mas se refere às coisas que podemos representar usando termos \cite{clocksin2003programming}.
-Um programa Prolog consiste em um conjunto de cláusulas, onde cada cláusula ou é um fato sobre a informação dada ou uma regra sobre como a solução pode relacionar ou ser inferida a partir dos fatos dados \cite{clocksin2003programming}.
+Um programa Prolog consiste em um conjunto de cláusulas, no qual cada cláusula ou é um fato sobre a informação dada ou uma regra sobre como a solução pode relacionar ou ser inferida a partir dos fatos dados \cite{clocksin2003programming}.
 Segundo \cite{clocksin2003programming}, a programação em Prolog consiste em: 
 \begin{itemize}
 \item especificar algum fato sobre os objetos e seus relacionamentos;
 \item definir algumas regras sobre objetos e seus relacionamentos, e
 \item fazer perguntas sobre os objetos e seus relacionamentos.
 \end{itemize}
-O Prolog pode fazer muito mais do que apenas responder sim ou não às perguntas feitas, ele permite que um computador seja usado como um armazém de fatos e regras, fornecendo maneiras de se fazer inferências a partir de um fato ou outro e encontrar os valores das variáveis que levam a uma dedução lógica.
+O Prolog pode fazer muito mais do que apenas responder sim ou não às perguntas feitas, ele permite que um computador seja usado como um armazém de fatos e regras, fornecendo maneiras de se fazer inferências a partir de um fato ou outro, e encontrar os valores das variáveis que levam a uma dedução lógica.
 Algumas definições base da linguagem Prolog são descritas a seguir.
 \begin{itemize}
 \item \textbf{Fato:} um fato é a definição das relações entre os objetos. Para implementar essas definições, algumas regras devem ser seguidas i) os nomes de todas as relações e objetos devem começar com letra minúscula; ii) a relação é escrita primeiro seguida do(s) objeto(s) entre parênteses (caso tenha mais de um separar com vírgula); iii) um fato deve terminar com ponto-final. A relação entre os objetos é chamada de predicado, e os objetos da relação são chamados de argumentos.
 \item \textbf{Questão:} a questão tem a escrita muito parecida com o fato, exceto que começa com um ponto de interrogação. Para cada pergunta feita ao interpretador de Prolog, ele irá procurar na sua base de conhecimento fatos ou regras que comprovem aquele questionamento. 
-\item \textbf{Variáveis:} é um nome com letra maiúscula. Quando utilizado em uma pergunta, faz com que o intepretador de PROLOG procure na base de conhecimento um ou mais objetos que sejam equivalentes àquela variável. Como por exemplo, nessa base de conhecimento exitem três fatos: 
+\item \textbf{Variáveis:} é um nome com letra maiúscula. Quando utilizado em uma pergunta, faz com que o intepretador de PROLOG procure na base de conhecimento um ou mais objetos que sejam equivalentes àquela variável. Por exemplo, em uma determinada base de conhecimento exitem três fatos: 
 
 \lstset{language=Prolog}
 \begin{lstlisting}
@@ -316,7 +316,7 @@ X = pedro;
 X = joao.
 \end{lstlisting}
 
-\item \textbf{Conjunção:} é o operador vírgula (,) tendo função de "e". Quando utilizado na pergunta, por exemplo, o interpretador de Prolog procura na base de conhecimento fatos que comprovem as duas perguntas. Usando a base de conhecimento do item anterior, se perguntar ao interpretador de Prolog: 
+\item \textbf{Conjunção:} é o operador vírgula (,) tendo função de "e". Quando utilizado na pergunta, o interpretador de Prolog procura na base de conhecimento fatos que comprovem as duas perguntas. Usando a base de conhecimento do item anterior, se for perguntado ao interpretador de Prolog: 
 \lstset{language=Prolog}
 \begin{lstlisting}
 ?- gosta(maria, X) , gosta(laura, X).
@@ -326,12 +326,12 @@ ele responderá:
 \begin{lstlisting}
 X = joao.
 \end{lstlisting}
-Para responder a esse questionamento, o interpretador de Prolog procura primeiramente qual o objeto que pode ser a variável X, achando inicialmente o argumento pedro. Em seguida, ele procura se existe algum fato que Laura goste de Pedro. Caso não exista esse fato na base de conhecimento, ele volta para buscar outro objeto que possa ser a variável X, encontrando o argumento joão. Ao buscar por algum fato que comprove que Laura gosta de João, o interpretador encontra e retorna "sim" para a pergunta, ou seja, Maria gosta de João e Laura também. Caso existissem mais pessoas em comum que Maria e Laura gostassem, era só digitar ";" seguido de Enter e o interpretador de Prolog buscaria por outros objetos para X.
-\item \textbf{Regras:} uma regra é uma declaração geral sobre objetos e seus relacionamentos. Em Prolog, uma regra é comumente utilizada para dizer que um fato depende de um conjunto de outros fatos. Em Prolog, uma regra contém uma cabeça e um corpo, ligados por pelo símbolo " :- ", que é constituído por dois pontos e um hífen, e é pronunciado "se". 
+Para responder a esse questionamento, o interpretador de Prolog procura primeiramente qual o objeto que pode ser a variável X, achando inicialmente o argumento pedro. Em seguida, ele procura se existe algum fato que Laura goste de Pedro. Caso não exista esse fato na base de conhecimento, ele volta para buscar outro objeto que possa ser a variável X, encontrando o argumento joão. Ao buscar por algum fato que comprove que Laura gosta de João, o interpretador encontra e retorna "sim" para a pergunta, ou seja, Maria gosta de João e Laura também. Caso existissem mais pessoas em comum que Maria e Laura gostassem, era só digitar ";" seguido de "Enter" e o interpretador de Prolog buscaria por outros objetos para X.
+\item \textbf{Regras:} uma regra é uma declaração geral sobre objetos e seus relacionamentos. Em Prolog, uma regra é comumente utilizada para dizer que um fato depende de um conjunto de outros fatos. Cada regra contém uma cabeça e um corpo, ligados por pelo símbolo " :- ", que é constituído por dois pontos e um hífen, e é pronunciado "se". 
 \end{itemize}
 
 \section{Considerações parciais}
-Trabalhar a robótica dentro do âmbito escolar colabora no aprendizado de forma multidisciplinar. A robótica móvel está sendo muito utilizada pelas escolas, principalmente o kit da LEGO, para trabalhar nas crianças a parte motora, ao montar o robô, a parte intelectual, para construir os programas, e a parte social, para aprender a trabalhar em grupo.
+Trabalhar a robótica no âmbito escolar, colabora no aprendizado de forma multidisciplinar. A robótica móvel está sendo muito utilizada pelas escolas, principalmente o kit da LEGO, para trabalhar nas crianças a parte motora, ao montar o robô; a parte intelectual, para construir os programas; e a parte social, para aprender a trabalhar em grupo.
 
 Já na universidade, a robótica está muito associada à ideia de inteligência artificial, tendo um foco maior para as áreas de automação e otimização. Na área de otimização, o algoritmo guloso e a programação dinâmica são conceitos bem trabalhados e conhecidos. A utilização da linguagem de programação Prolog na área da robótica não é tão vasta quanto de outras linguagens, como C e C$++$, mas está sendo cada vez mais adotada. 
 
