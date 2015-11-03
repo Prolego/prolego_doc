@@ -219,7 +219,7 @@ A arquitetura de controle híbrido nada mais é do que um controle reativo sendo
 Este tipo de arquitetura é uma das mais sofisticadas e adotadas na implementação dos sistemas de controle dos robôs móveis autônomos modernos, devido a sua eficiência em atingir os objetivos do robô. 
 
 \section{Engenharia de software}
-O estudo da robótica na Universidade tem um foco considerável na inteligência artificial, e uma de suas subáreas é a otimização. A seguir são brevemente descritos os dois algoritmos de otimização abordados por este trabalho, o algoritmo guloso e a programação dinâmica, bem como o paradigma lógico, também tema deste trabalho.
+O estudo da robótica na Universidade tem um foco considerável na inteligência artificial, que é um dos métodos da otimização de problemas NP. A seguir são brevemente descritos os dois algoritmos de otimização abordados por este trabalho, o algoritmo guloso e a programação dinâmica, bem como o paradigma lógico, também tema deste trabalho.
 \subsection{Algoritmo guloso}
 Os algoritmos gulosos tomam uma decisão levando em consideração apenas a informação disponível no dado momento, sem levar em conta as consequências da decisão, nunca reconsiderando uma decisão já tomada. Dessa forma, o algoritmo guloso toma uma decisão ótima naquele momento (decisão ótima local), e espera que essa decisão seja também a ótima global \cite{anderson2004}.
 \subsubsection{Características do algoritmo guloso}
@@ -254,6 +254,8 @@ Esse tipo de estrutura não cobre todo tipo de problema que pode ser resolvido p
 \textbf{Lema:} todo conjunto independente maximal em um matróide tem o mesmo tamanho. 
 \textbf{Prova:}  Por contradição. Se existem dois conjuntos independentes maximais A e B e |A| < |B|, deve existir um elemento x $\in$ (B - A) tal que (A + x) $\in$ I. Isso contradiz o fato de que A é um conjunto maximal.
 
+Um exemplo prático da aplicação do algoritmo guloso pode ser encontrada na seção \ref{ProblemaDaMochila} deste trabalho.
+
 \subsection{Programação dinâmica} \label{Programação dinâmica}
 A programação dinâmica, assim como os métodos de "dividir para conquistar", combina as soluções dos subproblemas para resolver um problema. Esses métodos particionam os problemas em subproblemas de forma que, resolvendo os subproblemas recursivamente, resolve-se o problema. Já a programação dinâmica aplica-se quando os subproblemas se particionam em subsubproblemas. Um algoritmo comum resolve repetidamente essas partições, trabalhando mais que o necessário. Em contrapartida, o algoritmo dinâmico resolve cada subsubproblema apenas uma vez, salvando o resultado em uma tabela, evitando calcular repetidas vezes o mesmo problema \cite{cormen2009introduction}.
 Um problema pode ter várias soluções possíveis, cada uma com um valor, e a solução com o melhor valor (maior ou menor) é dita a solução ótima para o problema.
@@ -270,7 +272,7 @@ Para caracterizar o espaço de subproblemas, deve-se manter o espaço o mais sim
 \item quantos subproblemas uma solução ideal utiliza para o problema, e
 \item quantas escolhas existem para determinar quais subproblemas usar em uma solução ótima.
 \end{enumerate}
-Ou seja, pode ser que um problema tenha apenas um subproblema (de tamanho n - i), mas deve-se considerar n escolhas para i, afim de determinar quais escolhas produzem uma solução ótima.
+Ou seja, pode ser que um problema tenha apenas um subproblema (de tamanho \textit{n - i}), mas deve-se considerar \textit{n} escolhas para \textit{i}, afim de determinar quais escolhas produzem uma solução ótima.
 
 \subsubsection{\textit{Memoization} vs Iteração sobre subproblemas} 
 A palavra \textit{memoization} vem do termo \textit{memoize} que deriva de um termo latim \textit{memorandum} que quer dizer relembrando. Essa é uma técnica \textit{top-down} que  armazena em uma tabela a solução de cada subsubproblema, evitando assim o retrabalho e aumentando a eficiência. Essa técnica utiliza um algoritmo recursivo.
@@ -326,8 +328,8 @@ ele responderá:
 \begin{lstlisting}
 X = joao.
 \end{lstlisting}
-Para responder a esse questionamento, o interpretador de Prolog procura primeiramente qual o objeto que pode ser a variável X, achando inicialmente o argumento pedro. Em seguida, ele procura se existe algum fato que Laura goste de Pedro. Caso não exista esse fato na base de conhecimento, ele volta para buscar outro objeto que possa ser a variável X, encontrando o argumento joão. Ao buscar por algum fato que comprove que Laura gosta de João, o interpretador encontra e retorna "sim" para a pergunta, ou seja, Maria gosta de João e Laura também. Caso existissem mais pessoas em comum que Maria e Laura gostassem, era só digitar ";" seguido de "Enter" e o interpretador de Prolog buscaria por outros objetos para X.
-\item \textbf{Regras:} uma regra é uma declaração geral sobre objetos e seus relacionamentos. Em Prolog, uma regra é comumente utilizada para dizer que um fato depende de um conjunto de outros fatos. Cada regra contém uma cabeça e um corpo, ligados por pelo símbolo " :- ", que é constituído por dois pontos e um hífen, e é pronunciado "se". 
+Para responder a esse questionamento, o interpretador de Prolog procura primeiramente qual o objeto que pode ser a variável X, achando inicialmente o argumento \textit{pedro}. Em seguida, ele procura se existe algum fato que Laura goste de Pedro. Caso não exista esse fato na base de conhecimento, ele volta para buscar outro objeto que possa ser a variável X, encontrando o argumento \textit{joão}. Ao buscar por algum fato que comprove que Laura gosta de João, o interpretador encontra e retorna "sim" para a pergunta, ou seja, Maria gosta de João e Laura também. Caso existissem mais pessoas em comum que Maria e Laura gostassem, era só digitar ";" seguido de "Enter" e o interpretador de Prolog buscaria por outros objetos para X.
+\item \textbf{Regras:} uma regra é uma declaração geral sobre objetos e seus relacionamentos. Em Prolog, uma regra é comumente utilizada para dizer que um fato depende de um conjunto de outros fatos. Cada regra contém uma cabeça e um corpo, ligados pelo símbolo " :- ", que é constituído por dois pontos e um hífen, e é pronunciado "se". 
 \end{itemize}
 
 \section{Considerações parciais}

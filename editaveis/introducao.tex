@@ -19,7 +19,7 @@ Um robô pode ser categorizado em um dos três grupos, atualmente conhecidos: ma
 
 A robótica é uma ciência, em rápida ascenção, que envolve áreas do conhecimento como: microeletrônica, computação, engenharia mecânica, inteligência artificial, física, neurociência, entre outras. Portanto, estuda tecnologias associadas ao projeto, fabricação, teoria e aplicação dos robôs.
 	
-Sendo a robótica uma área tão interdisciplinar, usá-la como instrumento de aprendizagem é um tanto quanto benéfico, pois ensina à criança e/ou ao jovem a trabalhar em equipe, desenvolver o raciocínio lógico através de problemas concretos, e estimula a leitura, exploração, investigação, criatividade e organização. Além de aprimorar a parte motora do indivíduo ao trabalhar com o hardware do robô, também é aprimorado o raciocínio lógico e a abstração ao programar o software do robô \cite{da2009roboeduc}. 
+Sendo a robótica uma área tão inter e multidisciplinar, usá-la como instrumento de aprendizagem é um tanto quanto benéfico, pois ensina à criança e/ou ao jovem a trabalhar em equipe, desenvolver o raciocínio lógico através de problemas concretos, e estimula a leitura, exploração, investigação, criatividade e organização. Além de aprimorar a parte motora do indivíduo ao trabalhar com o hardware do robô, também é aprimorado o raciocínio lógico e a abstração ao programar o software do robô \cite{da2009roboeduc}. 
 
 Em meados dos anos 60, Seymourt Papert, reconhecido matemático, educador e pesquisador do MIT\footnote{http://web.mit.edu} (Instituto de Tecnologia de Massachusetts), criou a linguagem de programação LOGO. Essa linguagem foi utilizada nos kits educacionais da LEGO, conferindo o início do sistema educacional LEGO-LOGO. Nesse sistema, as crianças têm a possibilidade de construir seus robôs protótipos com os blocos de montagem e outros recursos do kit educacional da LEGO bem como programar com a linguagem LOGO, gerando o comportamento desejado nesses protótipos \cite{da2009roboeduc}.
 
@@ -46,7 +46,7 @@ No intuito de colaborar na formação de uma equipe competitiva, têm-se como pr
 
 Diante do exposto, acredita-se que a elaboração de uma base de conhecimento orientada ao Paradigma Lógico \cite{tucker2009linguagens}, especificamente implementada com base em algoritmos da Inteligência Artificial, conferirá ao robô a capacidade de gerar um roteiro de missões, sendo esse o de maior pontuação possível de ser realizada dentro do tempo restante.
 
-Pretende-se, com tal esforço, agregar valor na formação de uma equipe competitiva em robótica, disponibilizando uma máquina de raciocínio apoiada em algoritmos avançados e instigando os membros da equipe a refinarem essa máquina de forma evolutiva e continuamente.
+Pretende-se, com tal esforço, agregar valor na formação de uma equipe competitiva em robótica, disponibilizando uma máquina de raciocínio apoiada em algoritmos avançados e instigando os membros da equipe a refinarem essa máquina de forma contínua e evolutiva, ou seja, ir aprimorando-a de acordo com as necessidades.
 
 \section{Questão de pesquisa}
 
@@ -64,18 +64,62 @@ Com base no objetivo geral, foram propostos os seguintes objetivos específicos 
 \item Investigar algoritmos candidatos à solução da questão de pesquisa considerando, em um primeiro escopo dessa atividade, o estudo de algoritmos gulosos, programação dinâmica e paradigma lógico;
 \item Implementar uma solução que agregue ao robô a capacidade de gerar roteiros de missões de máxima pontuação a partir de um ponto inicial e um tempo restante.
 \item Estudar o funcionamento do kit educacional LEGO Mindstorms visando a realização de uma pesquisa exploratória e experimental que permita a verificação quanto a pertinência da solução estabelecida para o contexto investigado.
-\item Estabelecer uma metodologia de desenvolvimento, orientada às boas práticas da Engenharia de Software, no intuito de conduzir o processo investigativo, a implementação da solução bem como a verificação dessa solução no contexto acordado.
+\item Estabelecer uma metodologia de desenvolvimento, orientada às boas práticas da 	Engenharia de Software, no intuito de conduzir o processo investigativo, a implementação da solução bem como a verificação dessa solução no contexto acordado.
 \end{itemize}
 
+\section{Metodologia de Pesquisa}
+Este trabalho é classificado quanto à natureza como pesquisa aplicada, pois tem por objetivo gerar conhecimento para a solução de um problema específico \cite{moresi2003metodologia}, o desenvolvimento de uma máquina de raciocínio para tomada de decisões estratégicas em robótica educacional.
+
+Quanto à abordagem, esta pesquisa é classificada como qualitativa, pois a fonte direta de coleta de dados é o ambiente natural estudado, campeonatos de róbotica da Fisrt Lego League, e não requer o uso de métodos e técnicas estatísticas \cite{moresi2003metodologia}.
+
+Quanto à tipologia, este trabalho é classificado como descritivo, pois objetiva estabelecer relações entre variáveis \cite{moresi2003metodologia}, sendo elas: tempo restante de competição, pontuação de cada missão e tempo de execução de cada missão. Essas váriáveis estão contidas em uma base de conhecimento, e a partir dela foi criado um algoritmo, baseado em programação dinâmica, que gera um roteiro de missões que devem ser executadas pelo robô, para que a maior pontuação seja atingida. 
+
+Quanto aos procedimentos técnicos, são utilizados nesse trabalho a pesquisa bibliográfica, que tem como base livros e artigos científicos, e a experimental que será baseada em cenários de uso, cada um com o conjuto diferente de missões disponíveis para a geração do roteiro.
+
+Quanto às técnicas de coleta de dados, neste trabalho serão utilizados a bibliografia e a observação sistemática. A Figura \ref{metodologiaPesquisa} apresenta de forma resumida essa classificação.
+
+
+\FloatBarrier
+\begin{figure}[!h]
+\centering
+\includegraphics[keepaspectratio=true,scale=0.5]{figuras/metodologiaPesquisa.png}
+\caption{Classificação da metodologia de pesquisa}
+\label{metodologiaPesquisa}
+\end{figure}
+
+Segundo \citeonline{andre2008estudo} uma pesquisa é executada de acordo com três fases: Planejamento, Coleta de dados e Análise de dados.Tais fases foram adotadas por este trabalho e estão organizadas na Figura \ref{fasesPesquisa}.
+\clearpage
+
+\FloatBarrier
+\begin{figure}[!h]
+\centering
+\includegraphics[keepaspectratio=true,scale=0.8]{figuras/fasesPesquisa.png}
+\caption{Fases da pesquisa}
+\label{fasesPesquisa}
+\end{figure}
+
+A fase de planejamento consiste em definir o objeto de estudo, o escopo do estudo, a questão de pesquisa e a metodologia de pesquisa, com os devidos procedimentos e instrumentos de coleta. Na fase de coleta de dados se aplicam os procedimentos de coleta
+são aplicados. Por fim, na última fase os dados são analisados e os resultados são relatados.
+
+Na fase de coleta de dados são utilizadas as técnicas de revisão bibliográfica e observação sistemática, detalhadas a seguir.
+\begin{itemize}
+\item \textbf{Revisão bibliográfica} 
+
+Pesquisa realizada nas principais bases de dados e livros, com foco na caracterização: (i) da evolução da robótica até a sua utilização no âmbito educacional; (ii) do estado da arte da robótica móvel; (iii) dos algoritmos de otimização, como algoritmo guloso e programação dinâmica, e (iv) do paradigma lógico de programação.
+
+\item \textbf{Observação sistemática}
+
+Observação conduzida de acordo com um planejamento para responder ao seguinte questionamento: a máquina de raciocínio está satisfatória? Para chegar a resposta desta questão são utilizados critérios de avaliação, previamente estabelecidos.
+
+\end{itemize}
 \section{Organização dos capítulos}
 Este trabalho de conclusão de curso está organizado em seis capítulos, sendo o primeiro dedicado à Introdução. Os demais são brevemente descritos a seguir:
 \begin{itemize}
 \item Referencial teórico: explana sobre a evolução da robótica educacional, principais conceitos do Paradigma Lógico e da programação dinâmica. 
 \item Suporte tecnológico: descreve as tecnologias utilizadas no desenvolvimento
 tanto da máquina de raciocínio quanto da prova de conceito, apresentando ferramentas, \textit{plugins} e \textit{kits} utilizados.
-\item Metodologia: aborda, dentre outros detalhes, o fluxo das atividades, o cronograma bem como modalidades de pesquisa e desenvolvimento e a prova de conceito elaborada.
-\item Proposta: descreve em detalhes a proposta definida a partir do referencial teórico levantado e da prova de conceito elaborada.
-\item Considerações finais: efetua uma breve reflexão sobre o trabalho e lista atividades previstas para a continuação do mesmo.
+\item Materiais e métodos: aborda, dentre outros detalhes, o fluxo das atividades, detalhando como cada etapa de desenvolvimento foi executada, de acordo com o cronograma bem como os resultados obtidos em cada etapa.
+\item Conclusão: efetua uma reflexão sobre o trabalho de forma a concluir se todos os objetivos estabelecidos foram atingidos e a questão de pesquisa respondida, bem como relaciona trabalhos futuros.
 \end{itemize}
 
 
