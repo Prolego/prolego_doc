@@ -254,8 +254,6 @@ Esse tipo de estrutura não cobre todo tipo de problema que pode ser resolvido p
 \textbf{Lema:} todo conjunto independente maximal em um matróide tem o mesmo tamanho. 
 \textbf{Prova:}  Por contradição. Se existem dois conjuntos independentes maximais A e B e |A| < |B|, deve existir um elemento x $\in$ (B - A) tal que (A + x) $\in$ I. Isso contradiz o fato de que A é um conjunto maximal.
 
-Um exemplo prático da aplicação do algoritmo guloso pode ser encontrada na seção \ref{ProblemaDaMochila} deste trabalho.
-
 \subsection{Programação dinâmica} \label{Programação dinâmica}
 A programação dinâmica, assim como os métodos de "dividir para conquistar", combina as soluções dos subproblemas para resolver um problema. Esses métodos particionam os problemas em subproblemas de forma que, resolvendo os subproblemas recursivamente, resolve-se o problema. Já a programação dinâmica aplica-se quando os subproblemas se particionam em subsubproblemas. Um algoritmo comum resolve repetidamente essas partições, trabalhando mais que o necessário. Em contrapartida, o algoritmo dinâmico resolve cada subsubproblema apenas uma vez, salvando o resultado em uma tabela, evitando calcular repetidas vezes o mesmo problema \cite{cormen2009introduction}.
 Um problema pode ter várias soluções possíveis, cada uma com um valor, e a solução com o melhor valor (maior ou menor) é dita a solução ótima para o problema.
@@ -331,6 +329,28 @@ X = joao.
 Para responder a esse questionamento, o interpretador de Prolog procura primeiramente qual o objeto que pode ser a variável X, achando inicialmente o argumento \textit{pedro}. Em seguida, ele procura se existe algum fato que Laura goste de Pedro. Caso não exista esse fato na base de conhecimento, ele volta para buscar outro objeto que possa ser a variável X, encontrando o argumento \textit{joão}. Ao buscar por algum fato que comprove que Laura gosta de João, o interpretador encontra e retorna "sim" para a pergunta, ou seja, Maria gosta de João e Laura também. Caso existissem mais pessoas em comum que Maria e Laura gostassem, era só digitar ";" seguido de "Enter" e o interpretador de Prolog buscaria por outros objetos para X.
 \item \textbf{Regras:} uma regra é uma declaração geral sobre objetos e seus relacionamentos. Em Prolog, uma regra é comumente utilizada para dizer que um fato depende de um conjunto de outros fatos. Cada regra contém uma cabeça e um corpo, ligados pelo símbolo " :- ", que é constituído por dois pontos e um hífen, e é pronunciado "se". 
 \end{itemize}
+
+\subsection{Otimização}
+\citeonline{lobato2008otimizaccao} defende que a otimização pode ser classificada segundo as seguintes categorias: (i) Por tentativa e erro ou Por função; (ii) Unidimensional ou Multidimensional; (iii) Dinâmica ou Estática; (iv) Discreto ou Contínuo; (v) Restritos ou Não Restritos; (vi) Clássicos ou Randômicos e, (vii) Mono-objetivo ou Multi-objetivos.
+
+A otimização por tentativa e erro se dá quando não se tem uma formulação matemática para 	o processo, fazendo-se necessário ajuste de parâmetros, já a otimização por função é o oposto, é quando se conhece o processo através de sua formulação matemática \cite{lobato2008otimizaccao}.
+
+Os problemas de otimização unidimensional caracterizam-se por haver apenas uma variável de entrada, enquanto na multidimensional podem existir múltiplas variáveis \cite{lobato2008otimizaccao}.
+
+Otimização dinâmica tem o resultado com dependência do tempo, ou seja, a variável tempo influencia na saída da otimização, já a otimização estática não tem tal dependência \cite{lobato2008otimizaccao}.
+
+O processo de otimização discreta é caracterizado por ter um número finito para os valores das variáveis de entrada, enquanto que na otimização contínua os valores podem ser infinitos  \cite{lobato2008otimizaccao}.
+
+A otimização restrita é aquela que apresenta algum tipo de restrição no processo, já a não restrita permite que o processo seja executado sem nenhum tipo de variável restritiva \cite{lobato2008otimizaccao}.
+
+A otimização clássica tenta alcançar a solução ótima através de uma sequência de passos, partindo de uma configuração inicial do problema, enquanto que a otimização randômica utiliza um conjunto de configurações iniciais do problema, baseado em cálculos de probabilidade, para o alcance da solução ótima \cite{lobato2008otimizaccao}.
+
+Por fim, a otimização mono-objetivos é aquela que é representada por uma única função objetivo, enquanto que a multiobjetivo busca atender a várias funções objetivos simultaneamente \cite{lobato2008otimizaccao}.
+ 
+O problema da mochila consiste em: dado um conjunto de itens, cada um com uma massa e um valor associado, determinar quais itens devem ser incluídos no conjunto de modo que a massa total seja menor ou igual à capacidade máxima da mochila e o valor do conjunto seja o maior possível \cite{prakasam2015metaheuristic}. 
+
+Baseado nessa definição, e nas definições das categorias de otimização citadas, o problema da mochila é um problema de otimização discreta, pois lida com valores de variáveis finitas, ou seja, o número de itens que serão analisados é finito, assim como a massa e o valor dos mesmos.
+
 
 \section{Considerações parciais}
 Trabalhar a robótica no âmbito escolar, colabora no aprendizado de forma multidisciplinar. A robótica móvel está sendo muito utilizada pelas escolas, principalmente o kit da LEGO, para trabalhar nas crianças a parte motora, ao montar o robô; a parte intelectual, para construir os programas; e a parte social, para aprender a trabalhar em grupo.
