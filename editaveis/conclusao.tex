@@ -1,1 +1,18 @@
 \chapter{Conclusão}
+	Nesse trabalho foram investigados alguns tipos de algoritmos de otimização, como o algoritmo guloso e a programação dinâmica, e como estes algoritmos poderiam ser adaptados ao problema em questão. Foi estudado também o paradigma lógico, para avaliar a viabilidade de utilizá-lo na solução. A decisão de utilizar o kit Lego Mindstorms NXT foi baseada no estudo sobre o funcionamento do mesmo e na comparação com outras soluções robóticas, como exposto no Capítulo \ref{suportetecnologico}.
+
+	A condução da pesquisa foi baseado na metodologia definida no Capítulo \ref{introducao}, orientada às boas práticas da Engenharia de Software. 
+		
+	Com base nessa pesquisa bibliográfica, foi desenvolvida uma máquina de raciocínio que, considerando a programação dinâmica como algoritmo para tomada de decisões, é capaz de selecionar missões, componto um roteiro, de forma que a pontuação é maximizada em relação ao tempo disponível.
+
+	A metodologia utilizada definiu que para a análise dos resultados seria utilizado o procedimento técnico de cenário de uso e técnica de coleta de dados da observação sistemática. Todos os resultados e descrição dos cenários de teste estão contidos no Capítulo \ref{cenariosTeste}. Como pôde-se observar, todos os cenários de teste obtiveram sucesso nos quesitos analisados, e a máquina de racicínio se mostrou satisfátoria.
+	
+	Utilizando a observação sistemática em cada cenário de teste, a máquina de raciocínio foi evoluída de forma ficar o mais modularizado possível, obedecendo às boas práticas de programação. A máquina de racicínio também foi evoluída para integrar com o \textit{framework} Traveller.
+	
+\section{Sugestão de trabalhos futuros}
+	Tendo em vista a continuidade do trabalho, com foco na melhoria da máquina de racicínio, algumas sugestões são indicadas aos interessados:
+	\begin{enumerate}
+	\item evoluir a máquina para que ela tenha conhecimento da localização atual, desta forma as missões poderão iniciar em qualquer local do tapete, e não só no ponto (0,0);
+	\item com o conhecimento da localização atual, evoluir o algoritmo para que ele retorne a próxima missão a ser executada, e não um roteiro de missões, e
+	\item acrescentar à maquina uma função que, em tempo de execução, retire a missão que foi executada anteriormente, atualizando assim, a base de conhecimento.
+	\end{enumerate}

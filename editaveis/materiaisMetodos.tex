@@ -22,7 +22,7 @@ A partir dessas entradas, a máquina de raciocínio avalia quais missões devem 
  \FloatBarrier
 \begin{figure}[!h]
 \centering
-\includegraphics[keepaspectratio=true,scale=0.7]{figuras/Comunicacao_Prolego_Traveller.png}
+\includegraphics[keepaspectratio=true,scale=0.9]{figuras/Comunicacao_Prolego_Traveller.png}
 \caption{Comunicação entre o Prolego e o Traveller Framework}
 \label{ComunicacaoProlegoTraveller}
 \end{figure}
@@ -36,7 +36,7 @@ A partir dessas entradas, a máquina de raciocínio avalia quais missões devem 
 \FloatBarrier
 \begin{figure}[!h]
 \centering
-\includegraphics[keepaspectratio=true,scale=0.7]{figuras/arquiteturaCamadas.png}
+\includegraphics[keepaspectratio=true,scale=0.9]{figuras/arquiteturaCamadas.png}
 \caption{Arquitetura em camadas de robôs móveis - \apud{vieira2005controle}{rinconframework}}
 \label{arquiteturaCamadas}
 \end{figure}
@@ -50,14 +50,15 @@ A terceira camada define a trajetória que o robô irá executar para chegar à 
 A quarta camada recebe o plano da trajetória feito pela camada anterior e define quais ações devem ser feitas sobre o \textit{hardware} para executar o plano. Essa camada tem conhecimento das dimensões e limitações do robô. A última camada atua diretamente no \textit{hardware} para garantir que os atuadores estão recebendo o sinal e agindo conforme planejado.
  
 \section{Montagem do robô}
-O robô utilizado por este trabalho é o Bauen, um tipo de montagem do robô NXT. Nessa montagem, o robô é feito com três motores, dois para as esteiras e um preparado para receber uma garra ou outro adereço. O motor da esquerda deve ser ligado na porta B, o da direita na porta C e o da "garra" na porta A. O tutorial completo, contendo o passo-a-passo para a montagem do robô pode ser encontrado no site da LEGO\footnote{$http://lego.brickinstructions.com/lego_instructions/set/8547/Mindstorms_NXT_2.0$}. 
+O robô utilizado por este trabalho é o Bauen, um tipo de montagem do robô NXT. Nessa montagem, o robô é feito com três motores, dois para as esteiras e um preparado para receber uma garra ou outro adereço. O motor da esquerda deve ser ligado na porta B, o da direita na porta C e o da "garra" na porta A. O tutorial completo, contendo o passo-a-passo para a montagem do robô pode ser encontrado no site da LEGO\footnote{http:\/\/lego.brickinstructions.com\/lego\_instructions\/set\/8547\/Mindstorms\_NXT\_2.0}. 
 
 Na Figura \ref{bauen}, é possível visualizar a aparência do robô quando montado. 
+\clearpage
 
 \FloatBarrier
 \begin{figure}[!h]
 \centering
-\includegraphics[keepaspectratio=true,scale=0.15]{figuras/bauen.jpg}
+\includegraphics[keepaspectratio=true,scale=0.25]{figuras/bauen.jpg}
 \caption{Montagem do robô Bauen - Lego Mindstorms NXT}
 \label{bauen}
 \end{figure}
@@ -120,6 +121,7 @@ As missões contidas no tapete \textit{Nature's Fury} \cite{challengeFury} são 
 	\textbf{Instalação do leJOS no Robô}
 
 	O aplicativo NXJ Flash, instalado pelo executável do leJOS, é o responsável pela instalação do \textit{firmware} no robô. Para iniciar a instalação, é necessário que o robô esteja conectado ao computador via cabo USB, ou seja, a instalação não é feita via \textit{bluetooth}.  
+\clearpage
 	A Figura \ref{lejosFirmware} mostra a aplicação NXJ Flash.
 \FloatBarrier
 \begin{figure}[!h]
@@ -141,19 +143,20 @@ As missões contidas no tapete \textit{Nature's Fury} \cite{challengeFury} são 
 \caption{Instalando Plugin no Eclipse}
 \label{installNewSoftware}
 \end{figure}
-	
+
 	Ao clicar em \textit{add}, um pop-up é aberto com as opções \textit{name} e \textit{url}, que devem ser preenchidas como mostrado na Figura \ref{pluginNXJ}. Nesse caso, basta clicar em OK, selecionar o \textit{plugin}, e clicar em \textit{Finish}.  
 
 \FloatBarrier
 \begin{figure}[!h]
 \centering
-\includegraphics[keepaspectratio=true,scale=0.7]{figuras/pluginNXJ.png}
+\includegraphics[keepaspectratio=true,scale=0.8]{figuras/pluginNXJ.png}
 \caption{Dados do Plugin do leJOS}
 \label{pluginNXJ}
 \end{figure}
 	
 	Para finalizar, é necessário adicionar o caminho, a partir do qual o leJOS foi instalado, na variável NXJ\_HOME, encontrada na aba \textit{Window}, opção \textit{Preferences}, clicando em leJOS NXJ, conforme mostrado na Figura \ref{nxjhome}.
-		
+\clearpage
+
 \FloatBarrier
 \begin{figure}[!h]
 \centering

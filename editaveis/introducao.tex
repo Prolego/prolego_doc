@@ -1,4 +1,4 @@
-\chapter{Introdução}
+\chapter{Introdução}\label{introducao}
 A robótica costuma ser uma área bem atrativa para qualquer pessoa, seja ela conhecedora ou não do assunto. Devido a esse interesse, o ramo da robótica vem se tornando particularmente popular nos últimos anos. A robótica móvel, em especial, vem agaranhando fãs ao redor do mundo, que buscam a possibilidade de contruir seus próprios robôs e programá-los para uma função específica. Os kits de robótica ganharam espaço no mercado devido à sua completude, pois contém motores e sensores diversos e também devido ao seu baixo custo, se comparado com robôs mais avançados. Com a popularização do uso dos kits de robótica, vários torneios de robótica foram iniciados, atraindo jovens estudantes, universitários e profissionais da área. 
 
 Esse capítulo está organizado em cinco sessões, sendo essas: Contextualização, Justificativa, Questão de Pesquisa, Objetivos e Organização dos Capítulos, todos devidamente detalhados a seguir.
@@ -27,7 +27,7 @@ Um dos kits de robótica mais populares criados pela LEGO é o Mindstorms \cite{
 
 \section{Justificativa}
 
-Retomando aspectos apontados na contextualização, seguem algumas preocupações intrínsecas desse contexto, com as quais procura-se justificar as necessidades desta pesquisa: (i) de uma investigação mais detalhada quanto à literatura associada; (ii) da elicitação de soluções candidatas, apoiadas na Engenharia de Software, na Inteligência Artificial e no projeto e análise de algoritmos, e (iii) da implementação de uma solução dentre as elicitadas.
+Retomando aspectos apontados na contextualização, seguem algumas preocupações intrínsecas desse contexto, com as quais se procura justificar as necessidades desta pesquisa: (i) de uma investigação mais detalhada quanto à literatura associada; (ii) da elicitação de soluções candidatas, apoiadas na Engenharia de Software, na Inteligência Artificial e no projeto e análise de algoritmos, e (iii) da implementação de uma solução dentre as elicitadas.
 
 O curso de Engenharia de Software da UnB/FGA oferece uma disciplina chamada Princípios de Robótica Educacional. Dentre os objetivos dessa disciplina, tem-se a intenção de formar grupos de granduandos para competições em robótica nos âmbitos regional, nacional e internacional. Nesse contexto, são estabelecidos desafios aos grupos de alunos matriculados na disciplina. Esses desafios orientam-se pelas propostas de atividades da First LEGO League \cite{kamenfirst}. Uma preocupação intrínseca dos grupos participantes consiste em lidar com diferentes variáveis, em tempo de competição. No caso, destacam-se: tempo total estabelecido para conclusão das missões, localização atual do robô e pontuação das missões.
 
@@ -50,10 +50,10 @@ Pretende-se, com tal esforço, agregar valor na formação de uma equipe competi
 
 \section{Questão de pesquisa}
 
-Este TCC buscará responder ao seguinte questionamento: É possível implementar inteligência artificial no robô LEGO Mindstorms, isto é uma máquina de raciocínio lógico, de tal forma que dada uma posição (X0, Y0) e um tempo restante, esse robô consiga gerar um roteiro de missões a serem executadas para alcançar a maior pontuação possível?
+Este TCC buscará responder ao seguinte questionamento: É possível implementar inteligência artificial no robô LEGO Mindstorms, isto é, uma máquina de raciocínio lógico, de tal forma que dada uma posição (X0, Y0) e um tempo restante, esse robô consiga gerar um roteiro de missões a serem executadas para alcançar a maior pontuação possível?
 
 \section{Objetivos}
-Os objetivos deste trabalho foram classificados quanto à objetivo geral e objetivos específicos, sendo ambos apresentados a seguir.
+Os objetivos deste trabalho foram classificados quanto a objetivo geral e objetivos específicos, sendo ambos apresentados a seguir.
 
 \subsection{Objetivo geral}
 Desenvolver uma máquina de raciocínio lógico, considerando um algoritmo específico para tomada de decisões, com a qual o robô deverá ser capaz de selecionar as missões, compondo um roteiro, de forma que a pontuação seja maximizada em relação ao tempo disponível, previamente estabelecido.
@@ -87,7 +87,7 @@ Quanto às técnicas de coleta de dados, neste trabalho serão utilizados a bibl
 \label{metodologiaPesquisa}
 \end{figure}
 
-Segundo \citeonline{andre2008estudo} uma pesquisa é executada de acordo com três fases: Planejamento, Coleta de dados e Análise de dados.Tais fases foram adotadas por este trabalho e estão organizadas na Figura \ref{fasesPesquisa}.
+Segundo \citeonline{andre2008estudo}, uma pesquisa é executada de acordo com três fases: Planejamento, Coleta de dados e Análise de dados.Tais fases foram adotadas por este trabalho e estão organizadas na Figura \ref{fasesPesquisa}.
 \clearpage
 
 \FloatBarrier
@@ -98,10 +98,9 @@ Segundo \citeonline{andre2008estudo} uma pesquisa é executada de acordo com tr�
 \label{fasesPesquisa}
 \end{figure}
 
-A fase de planejamento consiste em definir o objeto de estudo, o escopo do estudo, a questão de pesquisa e a metodologia de pesquisa, com os devidos procedimentos e instrumentos de coleta. Na fase de coleta de dados se aplicam os procedimentos de coleta
-são aplicados. Por fim, na última fase os dados são analisados e os resultados são relatados.
+A fase de planejamento consiste em definir o objeto de estudo, o escopo do estudo, a questão de pesquisa e a metodologia de pesquisa, com os devidos procedimentos e instrumentos de coleta. Na fase de coleta de dados, se aplicam os procedimentos de coleta. Por fim, na última fase os dados são analisados e os resultados são relatados.
 
-Na fase de coleta de dados são utilizadas as técnicas de revisão bibliográfica e observação sistemática, detalhadas a seguir.
+Na fase de coleta de dados, são utilizadas as técnicas de revisão bibliográfica e observação sistemática, detalhadas a seguir.
 \begin{itemize}
 \item \textbf{Revisão bibliográfica} 
 
@@ -109,7 +108,7 @@ Pesquisa realizada nas principais bases de dados e livros, com foco na caracteri
 
 \item \textbf{Observação sistemática}
 
-Observação conduzida de acordo com um planejamento para responder ao seguinte questionamento: a máquina de raciocínio está satisfatória? Para chegar a resposta desta questão são utilizados critérios de avaliação, previamente estabelecidos.
+Observação conduzida de acordo com um planejamento para responder ao seguinte questionamento: a máquina de raciocínio está satisfatória? Para chegar a resposta desta questão, são utilizados critérios de avaliação, previamente estabelecidos.
 
 \end{itemize}
 \section{Organização dos capítulos}
@@ -118,7 +117,8 @@ Este trabalho de conclusão de curso está organizado em seis capítulos, sendo 
 \item Referencial teórico: explana sobre a evolução da robótica educacional, principais conceitos do Paradigma Lógico e da programação dinâmica. 
 \item Suporte tecnológico: descreve as tecnologias utilizadas no desenvolvimento
 tanto da máquina de raciocínio quanto da prova de conceito, apresentando ferramentas, \textit{plugins} e \textit{kits} utilizados.
-\item Materiais e métodos: aborda, dentre outros detalhes, o fluxo das atividades, detalhando como cada etapa de desenvolvimento foi executada, de acordo com o cronograma bem como os resultados obtidos em cada etapa.
+\item Prolego: A máquina de raciocínio : aborda, dentre outros detalhes, a descrição dos componentes que compõe a máquina de raciocínio, bem como o detalhamento da montagem do robô, do tapete de missões, das missões, da arquitetura do robô e do Prolego.
+\item Cenários de teste: detalha cada cenário de teste utilizado bem como seus resultados, a fim de responder ao questionamento da observação sistemática.
 \item Conclusão: efetua uma reflexão sobre o trabalho de forma a concluir se todos os objetivos estabelecidos foram atingidos e a questão de pesquisa respondida, bem como relaciona trabalhos futuros.
 \end{itemize}
 

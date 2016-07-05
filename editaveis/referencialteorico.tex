@@ -35,11 +35,11 @@ A róbótica educacional é um meio de inserir a tecnologia no meio educativo co
 \subsubsection{Teorias de aprendizagens}
 A teoria de aprendizado que fundamentou a róbotica educacional foi a construcionista, criada por Seymour Papert, baseada na teoria construtivista criada por Jean Piaget. Dentre as várias teorias de aprendizado existentes, algumas são brevemente descritas a seguir, segundo \cite{zilli2004robotica}.
 \begin{enumerate}
-\item \textbf{Teoria das inteligências múltiplas:} Howard Gardner, professor e psicólogo da \textit{Harvard Graduate School of Education}, dedicou-se, desde a década de 80, ao estudo das capacidades simbólicas em crianças com QI normal e alto, desenvolvendo o que ele chamou de "inteligências múltiplas". Essas podem ser vista como contendo três princípios fundamentais:
+\item \textbf{Teoria das inteligências múltiplas:} Howard Gardner, professor e psicólogo da \textit{Harvard Graduate School of Education}, dedicou-se, desde a década de 80, ao estudo das capacidades simbólicas em crianças com QI normal e alto, desenvolvendo o que ele chamou de "inteligências múltiplas". Essas podem ser vistas como contendo três princípios fundamentais:
 \begin{itemize}
 \item A inteligência não é algo que pode ser visto como tendo múltiplas habilidades. Existem múltiplas inteligências, cada uma com habilidades distintas entre si.
 \item  As inteligências são interdependentes. Logo, caso seja avaliada a competência de uma pessoa em uma área, esta avaliação não servirá para outras áreas.
-\item Apesar de serem interdependentes, as inteligências podem sim trabalhar em conjunto; caso contrário nada seria feito e nenhum problema seria resolvido.
+\item Apesar de serem interdependentes, as inteligências podem sim trabalhar em conjunto; caso contrário, nada seria feito e nenhum problema seria resolvido.
 \end{itemize}
 Gardner identificou essas inteligências distintas e classificou da seguinte forma:
 \begin{itemize}
@@ -67,7 +67,7 @@ Segundo Gardner, a escola valoriza mais a inteligência linguística e a lógico
 \item Aprender a aprender.
 \end{itemize} 
 
-\item \textbf{Teoria do construtivismo:} O suiço Jean Piaget estudou como o aprendiz passa de um estado de menor conhecimento para outro de maior conhecimento, e desenvolveu a teoria do construtivismo que foca no conhecimento científico na perspectiva do indivíduo que aprende. Nessa teoria, o sujeito é um ser ativo que estabelece relação de troca com o meio-objeto, relações essas que devem ser vivenciadas e significativa. Assim, o indivíduo incorpora novas informações, que passa a tornar parte do conhecimento. Segundo \cite{zilli2004robotica}, 
+\item \textbf{Teoria do construtivismo:} O suiço Jean Piaget estudou como o aprendiz passa de um estado de menor conhecimento para outro de maior conhecimento, e desenvolveu a teoria do construtivismo que foca no conhecimento científico na perspectiva do indivíduo que aprende. Nessa teoria, o sujeito é um ser ativo que estabelece relação de troca com o meio-objeto, relações essas que devem ser vivenciadas e significativa. Assim, o indivíduo incorpora novas informações, que passam a tornar parte do conhecimento. Segundo \cite{zilli2004robotica}, 
 
 \begin{citacao}
 O construtivismo defende que o conhecimento não é uma cópia da realidade, mas sim
@@ -159,7 +159,7 @@ Segundo \cite{zilli2004robotica}, além de propiciar o conhecimento da tecnologi
 \subsection{Fundamentos da robótica móvel}
 O foco da robótica vem se modificando ao longo dos anos. Tempos atrás, os braços mecânicos, também chamados de manipuladores, tinham um maior destaque junto a mídia e a sociedade em geral \cite{wolf2009robotica} sendo até um dos principais fatores para a Revolução Industrial. Nos tempos atuais, o destaque é a robótica móvel, que trata de máquinas capazes de se movimentar de forma independente, podendo ser terrestre, aquático, voador ou até espacial \apud{vieira2005controle}{rinconframework}, movidos por rodas, esteiras, patas, hélices, dentre outros. 
 
-Segundo \cite{wolf2009robotica} os Robôs Móveis Autônomos (RMA) possuem como características fundamentais
+Segundo \cite{wolf2009robotica}, os Robôs Móveis Autônomos (RMA) possuem como características fundamentais:
 
 \begin{citacao}
 as capacidades de locomoção e de operação de modo semi ou 
@@ -211,7 +211,7 @@ O controle hierárquico consiste na combinação de múltiplos módulos de contr
 
 O controle hierárquico com decomposição vertical possui os módulos de controle reativo dispostos de forma vertical, mantendo a prioridade de baixo para cima, sendo a camada mais baixa a mais prioritária. Um exemplo de uso desse modelo é quando a ação de desviar de um obstáculo, que está mais baixa, tem prioridade em relação a ação de seguir em frente, que está mais acima.
 
-O controle hierárquico com decomposição horizontal é adotado para controle de módulos deliberativos, implementando um \textit{"pipeline"} que decompõe as funções em camadas executadas em cascata, formando uma linha de ação horizontal. Um exemplo desse modelo é o tipo Sense-Model-Plan-Act (SMPA) que possui um longo ciclo de resposta ao estímulo de entrada devido as suas quatro camadas horizontais que serão executadas em cascata para cada estímulo.
+O controle hierárquico com decomposição horizontal é adotado para controle de módulos deliberativos, implementando um \textit{"pipeline"} que decompõe as funções em camadas executadas em cascata, formando uma linha de ação horizontal. Um exemplo desse modelo é o tipo \textit{Sense-Model-Plan-Act} (SMPA) que possui um longo ciclo de resposta ao estímulo de entrada devido as suas quatro camadas horizontais, as quais serão executadas em cascata para cada estímulo.
 
 \subsubsection{Controle híbrido}
 A arquitetura de controle híbrido nada mais é do que um controle reativo sendo planejado por um controle deliberativo. Inicialmente, é realizado um plano de execução pelo módulo deliberativo. Depois de pronto, o plano é executado por um módulo reativo de maior prioridade, o qual pode intervir nesse plano quando encontra algum obstáculo em meio à execução das ações. Nesse controle, pode-se ainda ter um módulo de auto-localização que monitora constantemente a posição atual do robô e a corrige, se necessário.
@@ -235,9 +235,9 @@ Segundo \cite{anderson2004}, os problemas e os algoritmos gulosos que os resolve
 \item a quarta e última função, chamada função objetivo, retorna o valor da solução encontrada.
 \end{itemize} 
 \end{itemize}
-É possível dizer que um algoritmo guloso trabalha da seguinte forma: inicialmente contém um conjunto S que está vazio, ou seja, nenhum candidato foi escolhido. A cada passo a função seleção é utilizada para determinar qual o melhor candidato. Se o elemento analisado não é viável, ignora-se o termo que está sendo avaliado no momento. Se for viável, adiciona o elemento ao conjunto S. O elemento avaliado, sendo ele aceito ou rejeitado, será avaliado apenas uma vez, não havendo reconsiderações. A cada vez que o conjunto de candidatos escolhidos (S) é ampliado, é também verificado se a solução do problema foi obtida \cite{anderson2004}.  
+É possível dizer que um algoritmo guloso trabalha da seguinte forma: inicialmente contém um conjunto S que está vazio, ou seja, nenhum candidato foi escolhido. A cada passo a função seleção é utilizada para determinar qual o melhor candidato. Se o elemento analisado não é viável, ignora-se o termo que está sendo avaliado no momento. Se for viável, adiciona-se o elemento ao conjunto S. O elemento avaliado, sendo ele aceito ou rejeitado, será avaliado apenas uma vez, não havendo reconsiderações. A cada vez que o conjunto de candidatos escolhidos (S) é ampliado, é também verificado se a solução do problema foi obtida \cite{anderson2004}.  
 \subsubsection{Elementos da estratégia gulosa}
-Como exposto, a estratégia utilizada pelo algoritmo guloso para encontrar a solução ótima do problema em questão é em cada passo escolher a solução que parece ser ótima naquele momento. Nem sempre uma estratégia gulosa é capaz de chegar à solução de um problema, mesmo esta existindo. Existem duas características que podem indicar se o problema pode ou não ser resolvido através de uma estratégia gulosa.
+Como exposto, a estratégia utilizada pelo algoritmo guloso para encontrar a solução ótima do problema em questão é, em cada passo, escolher a solução que parece ser ótima naquele momento. Nem sempre uma estratégia gulosa é capaz de chegar à solução de um problema, mesmo esta existindo. Existem duas características que podem indicar se o problema pode ou não ser resolvido através de uma estratégia gulosa.
 \begin{itemize}
 \item \textbf{Propriedade da escolha gulosa:} segundo a propriedade da escolha gulosa, uma solução globalmente ótima pode ser alcançada escolhendo uma solução localmente ótima. Para se provar que uma escolha localmente ótima em cada um dos passos irá levar a uma solução ótima, é necessário examinar uma solução ótima global para algum subproblema. Posteriormente, deve-se mostrar que essa solução pode ser modificada em uma solução gulosa. Tal estratégia irá resultar em um subproblema menor, mas similiar.
 \item \textbf{Subestrutura ótima:} esta característica também é importante quando se utiliza a programação dinâmica, vide Seção \ref{Programação dinâmica}. Um problema possui uma subestrutura ótima quando uma solução ótima para o problema contém, dentro dela, soluções ótimas para os subproblemas.
@@ -247,7 +247,7 @@ A teoria de algoritmos gulosos envolve o conceito de matróide que por definiç�
 \begin{enumerate}[label=(\roman*)]
 \item $\emptyset \in$ I;
 \item Se X $\subseteq$ Y e Y $\in$ I, então X $\in$ I;
-\item Se X, Y $\in$ I e |X| < |Y| então existe e $\in$ Y - X tal que X $\cup$ e $\in$ I.
+\item Se X, Y $\in$ I e |X| < |Y|, então existe e $\in$ Y - X tal que X $\cup$ e $\in$ I.
 \end{enumerate}
 Esse tipo de estrutura não cobre todo tipo de problema que pode ser resolvido pelo algoritmo guloso, mas cobre muitos casos de interesse prático.
 
@@ -257,7 +257,7 @@ Esse tipo de estrutura não cobre todo tipo de problema que pode ser resolvido p
 \subsection{Programação dinâmica} \label{Programação dinâmica}
 A programação dinâmica, assim como os métodos de "dividir para conquistar", combina as soluções dos subproblemas para resolver um problema. Esses métodos particionam os problemas em subproblemas de forma que, resolvendo os subproblemas recursivamente, resolve-se o problema. Já a programação dinâmica aplica-se quando os subproblemas se particionam em subsubproblemas. Um algoritmo comum resolve repetidamente essas partições, trabalhando mais que o necessário. Em contrapartida, o algoritmo dinâmico resolve cada subsubproblema apenas uma vez, salvando o resultado em uma tabela, evitando calcular repetidas vezes o mesmo problema \cite{cormen2009introduction}.
 Um problema pode ter várias soluções possíveis, cada uma com um valor, e a solução com o melhor valor (maior ou menor) é dita a solução ótima para o problema.
-Segundo \cite{cormen2009introduction} para se desenvolver uma solução de programação dinâmica devem ser seguidos quatro passos:
+Segundo \cite{cormen2009introduction}, para se desenvolver uma solução de programação dinâmica, devem ser seguidos quatro passos:
 \begin{enumerate}
 \item Caracterizar a estrutura de uma solução ótima;
 \item Recursivamente definir o valor de uma solução ótima;
@@ -278,8 +278,8 @@ A palavra \textit{memoization} vem do termo \textit{memoize} que deriva de um te
 A iteração sobre subproblemas é uma técnica \textit{bottom-up} que utiliza um algoritmo iterativo para calcular os subproblemas. Essa técnica começa a calcular do menor subproblema para o maior. 
 
 \subsection{Paradigma lógico}
-Os literais são fórmulas atômicas positivas ou negativas, que em conjunto formam uma cláusula. Um tipo de cláusula é a chamada cláusula de Horn (ou cláusula definitiva), onde cada cláusula tem no máximo um literal positivo. Essas cláusulas são utilizadas pela resolução SLD (Selection-rule driven Linear resolution for Definite clauses), que restringe o uso de literais para tornar as implementações mais eficientes. Essa resolução recebe como entrada um programa lógico P e uma consulta N, e efetua a resolução entre a consulta N e alguma regra de P. O ganho de eficiência vem do fato de que, para cada regra é possível a seleção de apenas um literal para a resolução com N \cite{rodrigues2010fundamentos}.
-A programação lógica surgiu da aplicação da SLD no processamento da linguagem natural da  inteligência artificial, e esse processamento serviu como primeira aplicação e motivo imediato para o desenvolvimento do Prolog (Programation en Logique) \cite{rodrigues2010fundamentos}.
+Os literais são fórmulas atômicas positivas ou negativas, que, em conjunto, formam uma cláusula. Um tipo de cláusula é a chamada cláusula de Horn (ou cláusula definitiva), onde cada cláusula tem no máximo um literal positivo. Essas cláusulas são utilizadas pela resolução SLD (\textit{Selection-rule driven Linear resolution for Definite clauses}), que restringe o uso de literais para tornar as implementações mais eficientes. Essa resolução recebe como entrada um programa lógico P e uma consulta N, e efetua a resolução entre a consulta N e alguma regra de P. O ganho de eficiência vem do fato de que, para cada regra é possível a seleção de apenas um literal para a resolução com N \cite{rodrigues2010fundamentos}.
+A programação lógica surgiu da aplicação da SLD no processamento da linguagem natural da  inteligência artificial, e esse processamento serviu como primeira aplicação e motivo imediato para o desenvolvimento do Prolog (\textit{Programation en Logique}) \cite{rodrigues2010fundamentos}.
 \subsubsection{Prolog}
 O Prolog é uma linguagem de programação utilizada para resolver problemas que envolvam objetos e relações entre objetos. O termo objeto em Prolog não se refere a uma estrutura de dados que pode herdar variáveis e métodos de uma classe, mas se refere às coisas que podemos representar usando termos \cite{clocksin2003programming}.
 Um programa Prolog consiste em um conjunto de cláusulas, no qual cada cláusula ou é um fato sobre a informação dada ou uma regra sobre como a solução pode relacionar ou ser inferida a partir dos fatos dados \cite{clocksin2003programming}.
@@ -292,7 +292,7 @@ Segundo \cite{clocksin2003programming}, a programação em Prolog consiste em:
 O Prolog pode fazer muito mais do que apenas responder sim ou não às perguntas feitas, ele permite que um computador seja usado como um armazém de fatos e regras, fornecendo maneiras de se fazer inferências a partir de um fato ou outro, e encontrar os valores das variáveis que levam a uma dedução lógica.
 Algumas definições base da linguagem Prolog são descritas a seguir.
 \begin{itemize}
-\item \textbf{Fato:} um fato é a definição das relações entre os objetos. Para implementar essas definições, algumas regras devem ser seguidas i) os nomes de todas as relações e objetos devem começar com letra minúscula; ii) a relação é escrita primeiro seguida do(s) objeto(s) entre parênteses (caso tenha mais de um separar com vírgula); iii) um fato deve terminar com ponto-final. A relação entre os objetos é chamada de predicado, e os objetos da relação são chamados de argumentos.
+\item \textbf{Fato:} um fato é a definição das relações entre os objetos. Para implementar essas definições, algumas regras devem ser seguidas i) os nomes de todas as relações e objetos devem começar com letra minúscula; ii) a relação é escrita primeiro seguida do(s) objeto(s) entre parênteses (caso tenha mais de um, separar com vírgula); iii) um fato deve terminar com ponto-final. A relação entre os objetos é chamada de predicado, e os objetos da relação são chamados de argumentos.
 \item \textbf{Questão:} a questão tem a escrita muito parecida com o fato, exceto que começa com um ponto de interrogação. Para cada pergunta feita ao interpretador de Prolog, ele irá procurar na sua base de conhecimento fatos ou regras que comprovem aquele questionamento. 
 \item \textbf{Variáveis:} é um nome com letra maiúscula. Quando utilizado em uma pergunta, faz com que o intepretador de PROLOG procure na base de conhecimento um ou mais objetos que sejam equivalentes àquela variável. Por exemplo, em uma determinada base de conhecimento exitem três fatos: 
 
@@ -341,13 +341,13 @@ Otimização dinâmica tem o resultado com dependência do tempo, ou seja, a var
 
 O processo de otimização discreta é caracterizado por ter um número finito para os valores das variáveis de entrada, enquanto que na otimização contínua os valores podem ser infinitos  \cite{lobato2008otimizaccao}.
 
-A otimização restrita é aquela que apresenta algum tipo de restrição no processo, já a não restrita permite que o processo seja executado sem nenhum tipo de variável restritiva \cite{lobato2008otimizaccao}.
+A otimização restrita é aquela que apresenta algum tipo de restrição no processo, já a não restrita permite que o processo seja executado sem tipo de variável restritiva algum \cite{lobato2008otimizaccao}.
 
 A otimização clássica tenta alcançar a solução ótima através de uma sequência de passos, partindo de uma configuração inicial do problema, enquanto que a otimização randômica utiliza um conjunto de configurações iniciais do problema, baseado em cálculos de probabilidade, para o alcance da solução ótima \cite{lobato2008otimizaccao}.
 
 Por fim, a otimização mono-objetivos é aquela que é representada por uma única função objetivo, enquanto que a multiobjetivo busca atender a várias funções objetivos simultaneamente \cite{lobato2008otimizaccao}.
  
-O problema da mochila consiste em: dado um conjunto de itens, cada um com uma massa e um valor associado, determinar quais itens devem ser incluídos no conjunto de modo que a massa total seja menor ou igual à capacidade máxima da mochila e o valor do conjunto seja o maior possível \cite{prakasam2015metaheuristic}. 
+O problema abordado no presente TCC assemelha-se ao problema da mochila. Este último consiste em: dado um conjunto de itens, cada um com uma massa e um valor associado, determinar quais itens devem ser incluídos no conjunto de modo que a massa total seja menor ou igual à capacidade máxima da mochila e o valor do conjunto seja o maior possível \cite{prakasam2015metaheuristic}. 
 
 Baseado nessa definição, e nas definições das categorias de otimização citadas, o problema da mochila é um problema de otimização discreta, pois lida com valores de variáveis finitas, ou seja, o número de itens que serão analisados é finito, assim como a massa e o valor dos mesmos.
 
